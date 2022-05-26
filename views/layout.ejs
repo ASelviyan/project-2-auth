@@ -7,8 +7,32 @@
   <title>Intro to Authentication</title>
 </head>
 <body>
+  <nav>
+    <ul>
+      <%if(user) {%>
+        <!-- if the user is logged in -->
+        <li>
+          <a href="/users/logout">logout</a>
+        </li>
+
+      <% } else {%>
+        <!-- if the user is not loggeed in -->
+        <li>
+          <a href="/users/new">Sing up</a>
+        </li>
+  
+        <li>
+          <a href="/users/login">login</a>
+        </li>
+
+        <% } %>
+
+    </ul>
+  </nav>
+  <main>
   <h1>Intro to Authentication</h1>
   <%- body %> 
+  </main>
   
 </body>
 </html>
